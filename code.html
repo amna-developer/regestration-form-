@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambridge Past Paper Registration</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles for a classy, book-themed look */
+        @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Inter:wght@300;400;600&display=swap');
+
+        /* Use a serif font for academic/classy feel, paired with Inter for inputs */
+        body {
+            font-family: 'Inter', sans-serif;
+            /* Book-themed background: subtle, deep color/texture */
+            background-color: #3f3f46; /* Warm Gray 700 */
+            background-image: url("https://marketplace.canva.com/EAFm9cdFi94/2/0/1600w/canva-bright-cartoon-green-and-brown-school-books-pattern-desktop-wallpaper-4Iwc1WA2mcM.jpg"); 
+            background-size: cover;
+            background-attachment: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        h1, h2 {
+            font-family: 'Merriweather', serif;
+            color: #077537 ; /* Deep Blue 800 */
+        }
+        .form-card {
+            background-color: #ffffff;
+            border: 2px solid #9ca3af; /* Gray border for a classic paper look */
+        }
+        .form-input:focus {
+            border-color: #077537 !important; /* Indigo on focus */
+            box-shadow: 0 0 0 1px #077537;
+        }
+        .submit-btn {
+            background-color: #077537 ; /* Deep Blue */
+            transition: background-color 0.3s ease, transform 0.1s;
+        }
+        .submit-btn:hover {
+            background-color: #077537; /* Slightly lighter blue on hover */
+            transform: translateY(-1px);
+        }
+    </style>
+</head>
+<body class="p-4">
+
+    <div class="form-card max-w-lg w-full p-8 md:p-10 rounded-xl shadow-2xl space-y-6">
+
+        <!-- Title Section -->
+        <header class="text-center">
+            <h1 class="text-3xl font-bold mb-2">Cambridge Past Papers</h1>
+            <h2 class="text-lg text-gray-600 font-normal">Registration for Access</h2>
+        </header>
+
+        <!-- Form -->
+        <form id="registrationForm" class="space-y-4">
+            <!-- Name Input -->
+            <div>
+                <label for="fullName" class="block text-sm font-semibold text-gray-700 mb-1">Full Name</label>
+                <input type="text" id="fullName" class="form-input w-full px-4 py-2 border border-gray-300 rounded-lg outline-none transition duration-200" placeholder="John Doe" required>
+            </div>
+
+            <!-- Email Input -->
+            <div>
+                <label for="email" class="block text-sm font-semibold text-gray-700 mb-1">Email Address</label>
+                <input type="email" id="email" class="form-input w-full px-4 py-2 border border-gray-300 rounded-lg outline-none transition duration-200" placeholder="your.email@example.com" required>
+            </div>
+
+            <!-- Exam Level Dropdown -->
+            <div>
+                <label for="examLevel" class="block text-sm font-semibold text-gray-700 mb-1">Cambridge Exam Level</label>
+                <select id="examLevel" class="form-input w-full px-4 py-2 border border-gray-300 rounded-lg appearance-none bg-white outline-none transition duration-200" required>
+                    <option value="" disabled selected>Select Level</option>
+                    <option value="igcse">IGCSE</option>
+                    <option value="as_a_level">AS & A Level</option>
+                    <option value="pre_u">Pre-U</option>
+                </select>
+            </div>
+
+            <!-- Subject Input (Optional) -->
+            <div>
+                <label for="subject" class="block text-sm font-semibold text-gray-700 mb-1">Primary Subject of Interest (Optional)</label>
+                <input type="text" id="subject" class="form-input w-full px-4 py-2 border border-gray-300 rounded-lg outline-none transition duration-200" placeholder="e.g., Mathematics, History, Physics">
+            </div>
+
+            <!-- Password Input -->
+            <div>
+                <label for="password" class="block text-sm font-semibold text-gray-700 mb-1">Create Password</label>
+                <input type="password" id="password" class="form-input w-full px-4 py-2 border border-gray-300 rounded-lg outline-none transition duration-200" minlength="8" required>
+                <p class="text-xs text-gray-500 mt-1">Minimum 8 characters.</p>
+            </div>
+
+            <!-- Error/Message Display Area -->
+            <div id="messageBox" class="p-3 rounded-lg text-sm hidden"></div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="submit-btn w-full py-3 mt-4 text-white font-bold rounded-lg shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50">
+                Register & Get Access
+            </button>
+        </form>
+        </div>
+        </body>
+</html>
+   
